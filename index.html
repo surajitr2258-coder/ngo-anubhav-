@@ -1,812 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anubhav – An Initiative To Keep Humanity Alive</title>
-  <meta name="description" content="Anubhav is a registered NGO (Reg. No. S0028919) based in Diamond Harbour, West Bengal, India. We reach remote tribal communities in Jhargram, Bankura, Purulia and Sundarbans with education, food, clothing and winter relief." />
-  <meta name="keywords" content="Anubhav NGO, Diamond Harbour, West Bengal, Sundarbans, Jhargram, Purulia, Bankura, tribal, education, charity, donate" />
-  <meta property="og:title" content="Anubhav – An Initiative To Keep Humanity Alive" />
-  <meta property="og:description" content="Reaching the unreached in remote West Bengal. Education, relief & dignity for tribal communities." />
-  <meta property="og:image" content="images/hero-bg.jpg" />
-  <meta property="og:type" content="website" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anubhav NGO | Diamond Harbour</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- CSS STYLES --- */
+        :root {
+            --primary-color: #e67e22; /* Orange - Energy */
+            --secondary-color: #2c3e50; /* Dark Blue - Trust */
+            --accent-color: #27ae60; /* Green - Growth */
+            --light-bg: #f4f4f4;
+            --text-color: #333;
+        }
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
 
-  <!-- AOS Animation Library -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
 
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="css/style.css" />
+        /* --- Header & Nav --- */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/logo.png" />
-</head>
-<body>
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+        }
 
-  <!-- ========== PRELOADER ========== -->
-  <div id="preloader">
-    <div class="loader"></div>
-  </div>
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
 
-  <!-- ========== NAVBAR ========== -->
-  <header id="navbar">
-    <div class="container nav-container">
-      <a href="#home" class="nav-logo">
-        <img src="images/logo.png" alt="Anubhav Logo" />
-        <div class="logo-text">
-          <span class="logo-name">ANUBHAV</span>
-          <span class="logo-tagline">An Initiative To Keep Humanity Alive</span>
-        </div>
-      </a>
+        .logo-img {
+            height: 60px; /* Adjust based on your logo shape */
+            width: auto;
+        }
 
-      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
+        .org-name h1 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            font-weight: 700;
+        }
 
-      <nav class="nav-menu" id="navMenu">
-        <ul>
-          <li><a href="#home" class="nav-link active">Home</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#school" class="nav-link">Sundarbans School</a></li>
-          <li><a href="#impact" class="nav-link">Impact</a></li>
-          <li><a href="#gallery" class="nav-link">Gallery</a></li>
-          <li><a href="#donate" class="nav-link nav-donate">Donate</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+        .reg-no {
+            font-size: 0.8rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            border: 1px solid var(--primary-color);
+            padding: 2px 8px;
+            border-radius: 4px;
+            display: inline-block;
+        }
 
-  <!-- ========== HERO ========== -->
-  <section id="home" class="hero">
-    <div class="hero-overlay"></div>
-    <div class="container hero-content">
-      <div class="hero-badge" data-aos="fade-down" data-aos-delay="200">
-        <i class="fas fa-registered"></i> Reg. No. S0028919 &nbsp;|&nbsp; Diamond Harbour, West Bengal
-      </div>
-      <h1 data-aos="fade-up" data-aos-delay="400">
-        Reaching the <span class="text-accent">Unreached</span><br />
-        in Remote India
-      </h1>
-      <p class="hero-sub" data-aos="fade-up" data-aos-delay="600">
-        We travel deep inside forests and river islands of Jhargram, Bankura, Purulia &amp; Sundarbans
-        to stand beside tribal and distressed communities — where most others cannot go.
-      </p>
-      <div class="hero-buttons" data-aos="fade-up" data-aos-delay="800">
-        <a href="#donate" class="btn btn-primary"><i class="fas fa-heart"></i> Donate Now</a>
-        <a href="#about" class="btn btn-outline-light"><i class="fas fa-info-circle"></i> Learn More</a>
-      </div>
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
 
-      <div class="hero-stats" data-aos="fade-up" data-aos-delay="1000">
-        <div class="stat-item">
-          <span class="stat-number" data-count="50">0</span><span class="stat-plus">+</span>
-          <span class="stat-label">Projects Completed</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number" data-count="70">0</span><span class="stat-plus">+</span>
-          <span class="stat-label">Children in School</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number" data-count="25">0</span><span class="stat-plus"></span>
-          <span class="stat-label">Dedicated Members</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number" data-count="4">0</span><span class="stat-plus"></span>
-          <span class="stat-label">Districts Covered</span>
-        </div>
-      </div>
-    </div>
+        .nav-links a {
+            font-weight: 500;
+            color: var(--secondary-color);
+            transition: 0.3s;
+        }
 
-    <div class="hero-scroll">
-      <a href="#about"><i class="fas fa-chevron-down"></i></a>
-    </div>
-  </section>
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
 
-  <!-- ========== ABOUT ========== -->
-  <section id="about" class="section">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-tag">Who We Are</span>
-        <h2 class="section-title">About <span class="text-accent">Anubhav</span></h2>
-        <p class="section-subtitle">
-          A grassroots non-profit collective of 25 dedicated members, based in Diamond Harbour,
-          West Bengal, working to keep humanity alive in the most forgotten corners.
-        </p>
-      </div>
+        .btn-donate {
+            background-color: var(--primary-color);
+            color: white !important;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
 
-      <div class="about-grid">
-        <div class="about-image" data-aos="fade-right">
-          <img src="images/hero-bg.jpg" alt="Anubhav team on a mission" />
-          <div class="about-image-badge">
-            <span>Est. Diamond Harbour</span>
-          </div>
-        </div>
+        /* --- Hero Section --- */
+        .hero {
+            /* REPLACE background.jpg with your actual file name */
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+            margin-top: 60px;
+        }
 
-        <div class="about-content" data-aos="fade-left">
-          <h3>Our Story</h3>
-          <p>
-            Anubhav was born from a simple but powerful realisation: entire villages deep inside the forests
-            of West Bengal and on remote Sundarbans islands were completely invisible to most relief and
-            development efforts. Roads are broken or non-existent, mobile networks are weak, and without
-            local guidance, outsiders cannot even find some of the hamlets.
-          </p>
-          <p>
-            Our team of 25 members, along with trusted local community guides, travels through jungles,
-            river routes and difficult terrain to reach families who are otherwise left out. We provide
-            food, clothing, winter blankets, and most importantly, educational support for children
-            who deserve a fair chance at life.
-          </p>
+        .hero-content h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
 
-          <div class="about-features">
-            <div class="feature">
-              <div class="feature-icon"><i class="fas fa-route"></i></div>
-              <div>
-                <h4>Last-Mile Access</h4>
-                <p>We go where other NGOs cannot — deep inside jungles and remote river islands.</p>
-              </div>
-            </div>
-            <div class="feature">
-              <div class="feature-icon"><i class="fas fa-hands-helping"></i></div>
-              <div>
-                <h4>Community-Led</h4>
-                <p>Local people guide us, help identify needs, and participate in every project.</p>
-              </div>
-            </div>
-            <div class="feature">
-              <div class="feature-icon"><i class="fas fa-heart"></i></div>
-              <div>
-                <h4>Dignity First</h4>
-                <p>We treat every person with respect — support is given, never imposed.</p>
-              </div>
-            </div>
-            <div class="feature">
-              <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
-              <div>
-                <h4>Registered & Transparent</h4>
-                <p>Reg. No. S0028919. We share how every rupee is used.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-  <!-- ========== WHAT WE DO ========== -->
-  <section id="projects" class="section section-alt">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-tag">What We Do</span>
-        <h2 class="section-title">Our <span class="text-accent">Projects</span></h2>
-        <p class="section-subtitle">
-          With 50+ successfully completed projects and 1 ongoing coaching centre, we focus on
-          concrete, meaningful support that changes lives immediately.
-        </p>
-      </div>
+        /* --- Stats Section --- */
+        .stats {
+            background: var(--accent-color);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
 
-      <!-- Ongoing Project -->
-      <div class="ongoing-project" data-aos="fade-up">
-        <div class="ongoing-badge"><i class="fas fa-circle-dot"></i> ONGOING PROJECT</div>
-        <div class="ongoing-grid">
-          <div class="ongoing-content">
-            <h3><i class="fas fa-school"></i> Sundarbans Island Coaching Centre</h3>
-            <p>
-              On a remote river island in the Sundarbans, far from city facilities, <strong>nearly 70 children</strong>
-              gather for daily tuition classes supported by Anubhav. This is the only supplementary educational
-              support available to them.
-            </p>
-            <ul>
-              <li><i class="fas fa-check-circle"></i> Daily tuition in core school subjects</li>
-              <li><i class="fas fa-check-circle"></i> Homework guidance and exam preparation</li>
-              <li><i class="fas fa-check-circle"></i> Safe and encouraging learning environment</li>
-              <li><i class="fas fa-check-circle"></i> Dropout prevention support</li>
-              <li><i class="fas fa-check-circle"></i> Basic learning materials provided</li>
-            </ul>
-            <a href="#donate" class="btn btn-primary btn-sm"><i class="fas fa-heart"></i> Sponsor a Child</a>
-          </div>
-          <div class="ongoing-stats">
-            <div class="ongoing-stat">
-              <i class="fas fa-child"></i>
-              <strong>~70</strong>
-              <span>Children Enrolled</span>
-            </div>
-            <div class="ongoing-stat">
-              <i class="fas fa-map-marker-alt"></i>
-              <strong>Sundarbans</strong>
-              <span>River Island Location</span>
-            </div>
-            <div class="ongoing-stat">
-              <i class="fas fa-rupee-sign"></i>
-              <strong>₹300</strong>
-              <span>Per Child / Month</span>
-            </div>
-            <div class="ongoing-stat">
-              <i class="fas fa-calendar-alt"></i>
-              <strong>Ongoing</strong>
-              <span>Active Year-Round</span>
-            </div>
-          </div>
-        </div>
-      </div>
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
 
-      <!-- Completed Projects -->
-      <h3 class="sub-heading" data-aos="fade-up"><i class="fas fa-check-double"></i> 50+ Completed Projects</h3>
-      <div class="projects-grid">
+        .stat-box { margin: 15px; }
+        .stat-number { font-size: 2.5rem; font-weight: 700; }
 
-        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="project-icon"><i class="fas fa-utensils"></i></div>
-          <h4>Food Distribution</h4>
-          <p>
-            Emergency and seasonal food support carried across difficult terrain to families
-            in remote hamlets with little or no access to markets.
-          </p>
-          <div class="project-locations">
-            <span><i class="fas fa-map-pin"></i> Jhargram</span>
-            <span><i class="fas fa-map-pin"></i> Purulia</span>
-            <span><i class="fas fa-map-pin"></i> Bankura</span>
-            <span><i class="fas fa-map-pin"></i> Sundarbans</span>
-          </div>
-        </div>
+        /* --- Projects Section --- */
+        .section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="project-icon"><i class="fas fa-tshirt"></i></div>
-          <h4>Clothing & Festival Drives</h4>
-          <p>
-            New clothes for children and elders during Durga Puja and other key occasions — for many,
-            the only new clothes they receive all year.
-          </p>
-          <div class="project-locations">
-            <span><i class="fas fa-map-pin"></i> Jhargram</span>
-            <span><i class="fas fa-map-pin"></i> Purulia</span>
-            <span><i class="fas fa-map-pin"></i> Bankura</span>
-          </div>
-        </div>
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--secondary-color);
+            font-size: 2rem;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--primary-color);
+            margin: 10px auto;
+        }
 
-        <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="project-icon"><i class="fas fa-mitten"></i></div>
-          <h4>Winter Blanket Distribution</h4>
-          <p>
-            Warm blankets distributed to elderly people and families in interior villages
-            during harsh winter months.
-          </p>
-          <div class="project-locations">
-            <span><i class="fas fa-map-pin"></i> Jhargram</span>
-            <span><i class="fas fa-map-pin"></i> Purulia</span>
-            <span><i class="fas fa-map-pin"></i> Bankura</span>
-          </div>
-        </div>
+        /* Current Project Highlight */
+        .current-project {
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+            border-left: 5px solid var(--accent-color);
+        }
 
-        <div class="project-card" data-aos="fade-up" data-aos-delay="400">
-          <div class="project-icon"><i class="fas fa-hand-holding-heart"></i></div>
-          <h4>Tribal Community Support</h4>
-          <p>
-            Reaching tribal families deep inside forests with essential supplies, dignity
-            and human connection — where most organisations never go.
-          </p>
-          <div class="project-locations">
-            <span><i class="fas fa-map-pin"></i> Jhargram</span>
-            <span><i class="fas fa-map-pin"></i> Purulia</span>
-          </div>
-        </div>
+        .cp-content {
+            padding: 40px;
+            flex: 1;
+        }
 
-      </div>
-    </div>
-  </section>
+        .cp-image {
+            flex: 1;
+            background: #ddd;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+        }
 
-  <!-- ========== SUNDARBANS SCHOOL ========== -->
-  <section id="school" class="section">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-tag">Education</span>
-        <h2 class="section-title">Sundarbans <span class="text-accent">Coaching Centre</span></h2>
-        <p class="section-subtitle">
-          Our flagship ongoing project — giving 70 children on a remote Sundarbans island
-          the gift of education and hope for a better future.
-        </p>
-      </div>
+        .tag {
+            background: var(--accent-color);
+            color: white;
+            padding: 5px 10px;
+            font-size: 0.8rem;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
 
-      <div class="school-grid">
-        <div class="school-content" data-aos="fade-right">
-          <h3>Why This School Matters</h3>
-          <p>
-            Children in the Sundarbans face multiple challenges: long distances to formal schools,
-            frequent flooding and cyclones, economic pressure on families, and a lack of safe study spaces.
-          </p>
-          <p>
-            Our coaching centre provides daily academic support, creating a consistent and caring
-            learning environment. We work closely with parents and local leaders to keep education
-            a priority, even when times are tough.
-          </p>
+        /* Past Projects Grid */
+        .past-projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
 
-          <div class="school-features">
-            <div class="school-feature">
-              <i class="fas fa-book-reader"></i>
-              <span>Daily tuition in core subjects</span>
-            </div>
-            <div class="school-feature">
-              <i class="fas fa-pencil-alt"></i>
-              <span>Homework & exam guidance</span>
-            </div>
-            <div class="school-feature">
-              <i class="fas fa-shield-alt"></i>
-              <span>Safe & encouraging environment</span>
-            </div>
-            <div class="school-feature">
-              <i class="fas fa-hand-holding-heart"></i>
-              <span>Dropout prevention support</span>
-            </div>
-            <div class="school-feature">
-              <i class="fas fa-box-open"></i>
-              <span>Learning materials provided</span>
-            </div>
-            <div class="school-feature">
-              <i class="fas fa-users"></i>
-              <span>Community involvement</span>
-            </div>
-          </div>
-        </div>
+        .project-card {
+            background: var(--light-bg);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
 
-        <div class="school-sponsor" data-aos="fade-left">
-          <div class="sponsor-card">
-            <h3><i class="fas fa-hand-holding-heart"></i> Sponsor a Child</h3>
-            <p>Help a Sundarbans child continue their education:</p>
-            <div class="sponsor-tiers">
-              <div class="tier">
-                <div class="tier-amount">₹300<span>/month</span></div>
-                <div class="tier-desc">Support 1 child's monthly tuition</div>
-              </div>
-              <div class="tier featured">
-                <div class="tier-badge">Most Popular</div>
-                <div class="tier-amount">₹3,600<span>/year</span></div>
-                <div class="tier-desc">Full year of tuition for 1 child</div>
-              </div>
-              <div class="tier">
-                <div class="tier-amount">₹6,000<span>/year</span></div>
-                <div class="tier-desc">Tuition + learning materials for 1 child</div>
-              </div>
-            </div>
-            <p class="sponsor-note">
-              <i class="fas fa-info-circle"></i>
-              As a sponsor you'll receive periodic updates and photos from the centre.
-            </p>
-            <a href="#donate" class="btn btn-primary btn-block">
-              <i class="fas fa-heart"></i> Start Sponsoring
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        .project-card:hover { transform: translateY(-5px); }
+        .project-card i { font-size: 2rem; color: var(--primary-color); margin-bottom: 15px; }
 
-  <!-- ========== IMPACT NUMBERS ========== -->
-  <section id="impact" class="section impact-section">
-    <div class="impact-overlay"></div>
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-tag light">Our Impact</span>
-        <h2 class="section-title light">Numbers That <span class="text-accent">Matter</span></h2>
-      </div>
+        /* --- About Section --- */
+        .about-bg { background-color: #f9f9f9; }
+        .about-text { text-align: center; max-width: 800px; margin: 0 auto; }
 
-      <div class="impact-grid">
-        <div class="impact-card" data-aos="zoom-in" data-aos-delay="100">
-          <i class="fas fa-project-diagram"></i>
-          <strong data-count="50">0</strong><span class="impact-plus">+</span>
-          <p>Projects Completed</p>
-        </div>
-        <div class="impact-card" data-aos="zoom-in" data-aos-delay="200">
-          <i class="fas fa-child"></i>
-          <strong data-count="70">0</strong><span class="impact-plus">+</span>
-          <p>Children in School</p>
-        </div>
-        <div class="impact-card" data-aos="zoom-in" data-aos-delay="300">
-          <i class="fas fa-map-marked-alt"></i>
-          <strong data-count="4">0</strong><span class="impact-plus"></span>
-          <p>Districts Reached</p>
-        </div>
-        <div class="impact-card" data-aos="zoom-in" data-aos-delay="400">
-          <i class="fas fa-users"></i>
-          <strong data-count="25">0</strong><span class="impact-plus"></span>
-          <p>Dedicated Members</p>
-        </div>
-        <div class="impact-card" data-aos="zoom-in" data-aos-delay="500">
-          <i class="fas fa-home"></i>
-          <strong data-count="100">0</strong><span class="impact-plus">+</span>
-          <p>Villages Reached</p>
-        </div>
-        <div class="impact-card" data-aos="zoom-in" data-aos-delay="600">
-          <i class="fas fa-hand-holding-heart"></i>
-          <strong data-count="1000">0</strong><span class="impact-plus">+</span>
-          <p>Families Supported</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== AREAS WE WORK ========== -->
-  <section class="section section-alt">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-tag">Where We Work</span>
-        <h2 class="section-title">Our <span class="text-accent">Reach</span></h2>
-        <p class="section-subtitle">
-          Four challenging districts in West Bengal where tribal and distressed communities live
-          in remote, hard-to-access areas.
-        </p>
-      </div>
-
-      <div class="areas-grid">
-        <div class="area-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="area-icon"><i class="fas fa-tree"></i></div>
-          <h4>Jhargram</h4>
-          <p>Dense forests and tribal hamlets far from main roads. Local guides help us navigate through
-          jungle trails to reach families.</p>
-        </div>
-        <div class="area-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="area-icon"><i class="fas fa-mountain"></i></div>
-          <h4>Purulia</h4>
-          <p>Hilly, arid terrain with scattered tribal settlements. One of the most backward districts
-          in West Bengal with extreme summer and winter conditions.</p>
-        </div>
-        <div class="area-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="area-icon"><i class="fas fa-leaf"></i></div>
-          <h4>Bankura</h4>
-          <p>Rural interior villages surrounded by forests. Communities here face poverty, limited
-          healthcare and educational opportunities.</p>
-        </div>
-        <div class="area-card" data-aos="fade-up" data-aos-delay="400">
-          <div class="area-icon"><i class="fas fa-water"></i></div>
-          <h4>Sundarbans</h4>
-          <p>Remote river islands accessible only by boat. Cyclones, flooding and tiger threats make
-          life incredibly challenging. Home to our coaching centre for 70 children.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== GALLERY ========== -->
-  <section id="gallery" class="section">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-tag">Moments</span>
-        <h2 class="section-title">Photo <span class="text-accent">Gallery</span></h2>
-        <p class="section-subtitle">
-          Glimpses from our field visits, distributions and the Sundarbans coaching centre.
-        </p>
-      </div>
-
-      <div class="gallery-grid" data-aos="fade-up">
-        <!-- Replace src with your actual images -->
-        <div class="gallery-item">
-          <img src="images/hero-bg.jpg" alt="Anubhav team during a field mission" />
-          <div class="gallery-caption">
-            <span>Field Mission – Jhargram</span>
-          </div>
-        </div>
-        <!-- Add more gallery items as you get more photos -->
-        <div class="gallery-item placeholder-gallery">
-          <div class="placeholder-content">
-            <i class="fas fa-camera"></i>
-            <span>More photos coming soon</span>
-          </div>
-        </div>
-        <div class="gallery-item placeholder-gallery">
-          <div class="placeholder-content">
-            <i class="fas fa-camera"></i>
-            <span>More photos coming soon</span>
-          </div>
-        </div>
-        <div class="gallery-item placeholder-gallery">
-          <div class="placeholder-content">
-            <i class="fas fa-camera"></i>
-            <span>More photos coming soon</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== DONATE ========== -->
-  <section id="donate" class="section section-alt">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-tag">Support Us</span>
-        <h2 class="section-title">Donate to <span class="text-accent">Anubhav</span></h2>
-        <p class="section-subtitle">
-          Every rupee helps us cross rivers, fields and forests to stand beside those who are
-          otherwise left out.
-        </p>
-      </div>
-
-      <div class="donate-grid">
-        <div class="donate-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="donate-card-header">
-            <i class="fas fa-calendar-check"></i>
-            <h3>Monthly Support</h3>
-          </div>
-          <ul class="donate-list">
-            <li><strong>₹300/month</strong> – Sponsor 1 child's tuition</li>
-            <li><strong>₹600/month</strong> – Sponsor 2 children</li>
-            <li><strong>₹1,000/month</strong> – Support remote relief work</li>
-            <li><strong>₹2,000/month</strong> – Become a Village Supporter</li>
-          </ul>
-        </div>
-
-        <div class="donate-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="donate-card-header">
-            <i class="fas fa-gift"></i>
-            <h3>One-Time Gifts</h3>
-          </div>
-          <ul class="donate-list">
-            <li><strong>₹500</strong> – New clothes for 1 child (Durga Puja)</li>
-            <li><strong>₹400</strong> – 1 warm blanket for an elderly person</li>
-            <li><strong>₹2,000</strong> – Food support for 1 family</li>
-            <li><strong>₹5,000</strong> – Support a small village camp</li>
-          </ul>
-        </div>
-
-        <div class="donate-card donate-card-bank" data-aos="fade-up" data-aos-delay="300">
-          <div class="donate-card-header">
-            <i class="fas fa-university"></i>
-            <h3>Payment Details</h3>
-          </div>
-          <div class="bank-details">
-            <div class="bank-row">
-              <span class="bank-label">UPI ID:</span>
-              <span class="bank-value">[your-upi-id@bank]</span>
-            </div>
-            <div class="bank-row">
-              <span class="bank-label">Bank:</span>
-              <span class="bank-value">[Your Bank Name]</span>
-            </div>
-            <div class="bank-row">
-              <span class="bank-label">A/C Name:</span>
-              <span class="bank-value">Anubhav</span>
-            </div>
-            <div class="bank-row">
-              <span class="bank-label">A/C No.:</span>
-              <span class="bank-value">[Account Number]</span>
-            </div>
-            <div class="bank-row">
-              <span class="bank-label">IFSC:</span>
-              <span class="bank-value">[IFSC Code]</span>
-            </div>
-          </div>
-          <p class="qr-note">
-            <i class="fas fa-qrcode"></i> You can also scan our UPI QR code.
-            Contact us for the QR image.
-          </p>
-        </div>
-      </div>
-
-      <div class="donate-footer" data-aos="fade-up">
-        <p>
-          <i class="fas fa-shield-alt"></i>
-          For receipts, 80G details (if applicable), CSR partnerships, or large donations,
-          please contact us directly. We are happy to share our registration documents and
-          financial information.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== TESTIMONIAL / STORY ========== -->
-  <section class="section story-section">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-tag">From the Field</span>
-        <h2 class="section-title">Stories of <span class="text-accent">Hope</span></h2>
-      </div>
-
-      <div class="stories-grid">
-        <div class="story-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="story-quote"><i class="fas fa-quote-left"></i></div>
-          <p>
-            In a small hamlet deep inside the forest in Jhargram, an elderly widow lived alone in a mud house
-            with a leaking roof and no warm bedding. Every winter, she would sit awake most of the night,
-            unable to sleep in the cold. With the support of our donors, we were able to bring her a thick
-            blanket and some basic food essentials. When our team visited her a month later, she told us,
-            <em>"This is the first winter in many years when I have slept peacefully."</em>
-          </p>
-          <div class="story-source">
-            <i class="fas fa-map-marker-alt"></i> Field visit — Jhargram
-          </div>
-        </div>
-
-        <div class="story-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="story-quote"><i class="fas fa-quote-left"></i></div>
-          <p>
-            A young girl in our Sundarbans coaching centre was on the verge of dropping out because her
-            family couldn't afford her school supplies. Through our sponsorship program, she received
-            books, stationery and daily tuition support. Today she continues to attend school with
-            confidence and dreams of becoming a teacher one day.
-          </p>
-          <div class="story-source">
-            <i class="fas fa-map-marker-alt"></i> Sundarbans Coaching Centre
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== CONTACT ========== -->
-  <section id="contact" class="section section-alt">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-tag">Reach Out</span>
-        <h2 class="section-title">Contact <span class="text-accent">Us</span></h2>
-        <p class="section-subtitle">
-          Whether you want to donate, volunteer, collaborate or visit our projects — we'd love to hear from you.
-        </p>
-      </div>
-
-      <div class="contact-grid">
-        <div class="contact-info" data-aos="fade-right">
-          <div class="contact-card">
-            <div class="contact-item">
-              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-              <div>
-                <h4>Location</h4>
-                <p>Diamond Harbour, South 24 Parganas,<br />West Bengal, India</p>
-              </div>
-            </div>
-
-            <div class="contact-item">
-              <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
-              <div>
-                <h4>Phone</h4>
-                <p>
-                  <a href="tel:+919734477236">+91 97344 77236</a><br />
-                  <a href="tel:+917001013732">+91 70010 13732</a>
-                </p>
-              </div>
-            </div>
-
-            <div class="contact-item">
-              <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
-              <div>
-                <h4>WhatsApp</h4>
-                <p>
-                  <a href="https://wa.me/919734477236" target="_blank">Chat on WhatsApp</a>
-                </p>
-              </div>
-            </div>
-
-            <div class="contact-item">
-              <div class="contact-icon"><i class="fas fa-registered"></i></div>
-              <div>
-                <h4>Registration</h4>
-                <p>Reg. No. S0028919</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="contact-cta">
-            <h4>Visit Our Projects</h4>
-            <p>
-              We organise field visits for supporters, students and CSR teams to our
-              Sundarbans school and interior villages in Jhargram, Bankura and Purulia.
-              Please contact us at least 2–3 weeks in advance.
-            </p>
-          </div>
-        </div>
-
-        <div class="contact-form-wrapper" data-aos="fade-left">
-          <form class="contact-form" id="contactForm">
-            <h3>Send us a message</h3>
-            <div class="form-group">
-              <label for="name">Your Name</label>
-              <input type="text" id="name" name="name" placeholder="Enter your name" required />
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="Enter your email" required />
-            </div>
-            <div class="form-group">
-              <label for="phone">Phone (optional)</label>
-              <input type="tel" id="phone" name="phone" placeholder="Your phone number" />
-            </div>
-            <div class="form-group">
-              <label for="subject">Subject</label>
-              <select id="subject" name="subject">
-                <option value="">Select a topic</option>
-                <option value="donate">I want to donate</option>
-                <option value="sponsor">Sponsor a child</option>
-                <option value="volunteer">Volunteer with Anubhav</option>
-                <option value="csr">CSR / Corporate Partnership</option>
-                <option value="visit">Visit a project</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="4" placeholder="Your message..." required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-block">
-              <i class="fas fa-paper-plane"></i> Send Message
-            </button>
-            <p class="form-note">
-              <i class="fas fa-info-circle"></i>
-              This form will open your email client. For instant response, WhatsApp us directly.
-            </p>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-about">
-          <div class="footer-logo">
-            <img src="images/logo.png" alt="Anubhav Logo" />
-            <div>
-              <span class="footer-name">ANUBHAV</span>
-              <span class="footer-tagline">An Initiative To Keep Humanity Alive</span>
-            </div>
-          </div>
-          <p>
-            A registered NGO (Reg. No. S0028919) based in Diamond Harbour, West Bengal, working in remote
-            tribal and riverine communities across Jhargram, Bankura, Purulia and Sundarbans.
-          </p>
-        </div>
-
-        <div class="footer-links">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#school">Sundarbans School</a></li>
-            <li><a href="#donate">Donate</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-contact">
-          <h4>Contact</h4>
-          <p><i class="fas fa-map-marker-alt"></i> Diamond Harbour, West Bengal, India</p>
-          <p><i class="fas fa-phone-alt"></i> +91 97344 77236</p>
-          <p><i class="fas fa-phone-alt"></i> +91 70010 13732</p>
-          <p>
-            <a href="https://wa.me/919734477236" target="_blank">
-              <i class="fab fa-whatsapp"></i> WhatsApp Us
-            </a>
-          </p>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>&copy; <span id="year"></span> Anubhav. All rights reserved. | Reg. No. S0028919</p>
-        <p class="footer-credit">Built with ❤️ for humanity</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Back to Top -->
-  <button id="backToTop" class="back-to-top" aria-label="Back to top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
-
-  <!-- WhatsApp Float -->
-  <a href="https://wa.me/919734477236" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-
-  <!-- AOS Animation -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-
-  <!-- Main JS -->
-  <script src="js/script.js"></script>
-
-</body>
-</html>
+        /* --- Footer --- */
+        footer<span class="ml-2" /><span class="inline-block w-3 h-3 rounded-full bg-neutral-a12 align-middle mb-[0.1rem]" />
